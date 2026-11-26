@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 160" fill="none">
+  <rect width="360" height="160" fill="#0d1b35"/>
+  <rect x="16" y="16" width="328" height="28" rx="6" fill="#13274a" stroke="rgba(70,184,255,0.4)"/>
+  <text x="28" y="34" fill="#a6cfff" font-family="Arial, sans-serif" font-size="10">Query: Compare RAG vector indexing strategies...</text>
+  <rect x="16" y="54" width="154" height="90" rx="6" fill="#13274a" stroke="rgba(255,255,255,0.12)"/>
+  <text x="28" y="72" fill="#ffd23f" font-family="Arial, sans-serif" font-weight="700" font-size="9">EXTRACTED SOURCES</text>
+  <rect x="28" y="82" width="128" height="8" rx="3" fill="rgba(255,255,255,0.18)"/>
+  <rect x="28" y="98" width="110" height="8" rx="3" fill="rgba(255,255,255,0.12)"/>
+  <rect x="28" y="114" width="120" height="8" rx="3" fill="rgba(255,255,255,0.12)"/>
+  <rect x="182" y="54" width="162" height="90" rx="6" fill="#13274a" stroke="rgba(35,209,139,0.4)"/>
+  <text x="194" y="72" fill="#23d18b" font-family="Arial, sans-serif" font-weight="700" font-size="9">AI RESEARCH SUMMARY</text>
+  <rect x="194" y="82" width="136" height="8" rx="3" fill="rgba(255,255,255,0.2)"/>
+  <rect x="194" y="98" width="122" height="8" rx="3" fill="rgba(255,255,255,0.14)"/>
+  <rect x="194" y="114" width="96" height="8" rx="3" fill="#46b8ff" opacity="0.45"/>
+</svg>

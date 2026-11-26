@@ -1,0 +1,53 @@
+/* ==========================================================================
+   CRANE & CONTAINER ANIMATION TIMING
+   ========================================================================== */
+
+/* Smooth mechanical movement along rail, vertical rod & container dimensions */
+.container-anchor.is-animating {
+  transition:
+    --pos-x var(--move-dur, 480ms) var(--crane-ease),
+    --pos-y var(--move-dur, 480ms) var(--crane-ease),
+    --c-w var(--move-dur, 480ms) var(--crane-ease),
+    --c-h var(--move-dur, 480ms) var(--crane-ease),
+    --c-d var(--move-dur, 480ms) var(--crane-ease),
+    --rx var(--move-dur, 480ms) var(--crane-ease),
+    --ry var(--move-dur, 480ms) var(--crane-ease),
+    --rz var(--move-dur, 480ms) var(--crane-ease);
+}
+
+/* Hover lift transition only when container is resting in pile */
+.container-anchor:not(.is-animating):not(.is-active) {
+  transition: --hover-lift 0.2s ease-out;
+}
+
+/* Door Swing with soft spring */
+.container-anchor .c-door {
+  transition: --door-left var(--door-dur, 440ms) var(--door-ease),
+              --door-right var(--door-dur, 440ms) var(--door-ease);
+}
+
+/* Crane motion */
+.crane-system.is-moving {
+  transition:
+    --crane-x var(--crane-dur, 420ms) var(--crane-ease),
+    --rod-len var(--crane-dur, 420ms) var(--crane-ease),
+    --claw-span var(--crane-dur, 420ms) var(--crane-ease);
+}
+
+.crane-system .crane-finger {
+  transition: --finger-angle var(--grip-dur, 210ms) var(--crane-ease);
+}
+
+.crane-system .crane-grip-head {
+  transition: --grip-bounce 160ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .container-anchor,
+  .container-anchor .c-door,
+  .crane-system,
+  .crane-system .crane-finger,
+  .crane-system .crane-grip-head {
+    transition: none !important;
+  }
+}

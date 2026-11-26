@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 160" fill="none">
+  <rect width="360" height="160" fill="#0d1b35"/>
+  <rect x="16" y="16" width="96" height="128" rx="6" fill="#13274a" stroke="rgba(255,255,255,0.12)"/>
+  <rect x="26" y="28" width="60" height="8" rx="4" fill="#f26a1f"/>
+  <rect x="26" y="46" width="76" height="14" rx="4" fill="rgba(255,255,255,0.12)"/>
+  <rect x="26" y="68" width="76" height="14" rx="4" fill="rgba(255,255,255,0.08)"/>
+  <rect x="26" y="90" width="76" height="14" rx="4" fill="rgba(255,255,255,0.08)"/>
+  <rect x="124" y="16" width="220" height="58" rx="6" fill="#13274a" stroke="rgba(255,255,255,0.12)"/>
+  <rect x="136" y="28" width="84" height="10" rx="4" fill="#ffffff" opacity="0.85"/>
+  <rect x="136" y="46" width="54" height="16" rx="4" fill="#23d18b" opacity="0.28"/>
+  <rect x="198" y="46" width="62" height="16" rx="4" fill="#ffd23f" opacity="0.28"/>
+  <rect x="268" y="46" width="62" height="16" rx="4" fill="#f26a1f" opacity="0.35"/>
+  <rect x="124" y="84" width="104" height="60" rx="6" fill="#13274a" stroke="rgba(255,255,255,0.12)"/>
+  <rect x="240" y="84" width="104" height="60" rx="6" fill="#13274a" stroke="rgba(255,255,255,0.12)"/>
+  <text x="136" y="106" fill="#ff9960" font-family="Arial, sans-serif" font-weight="700" font-size="10">KITCHEN QUEUE</text>
+  <text x="252" y="106" fill="#ffd23f" font-family="Arial, sans-serif" font-weight="700" font-size="10">STOCK ALERTS</text>
+  <rect x="136" y="116" width="78" height="7" rx="3" fill="rgba(255,255,255,0.2)"/>
+  <rect x="136" y="128" width="56" height="7" rx="3" fill="rgba(255,255,255,0.12)"/>
+  <rect x="252" y="116" width="78" height="7" rx="3" fill="rgba(255,255,255,0.2)"/>
+  <rect x="252" y="128" width="64" height="7" rx="3" fill="#f26a1f" opacity="0.65"/>
+</svg>

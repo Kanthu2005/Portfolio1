@@ -1,0 +1,153 @@
+/* ==========================================================================
+   RESPONSIVE RULES (Desktop 1440x900, Tablet 768px, Mobile 390px)
+   & Reduced Motion Support
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  :root {
+    --side-pad: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --side-pad: 20px;
+  }
+
+  .nav-link {
+    padding: 6px 11px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --side-pad: 14px;
+    --nav-height: auto;
+  }
+
+  /* Two-row mobile navigation */
+  .depot-nav {
+    padding: 10px var(--side-pad) 10px;
+  }
+
+  .nav-inner {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    row-gap: 8px;
+    column-gap: 10px;
+  }
+
+  .nav-logo {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .kn-wordmark {
+    width: 92px;
+  }
+
+    .nav-connect-wrap {
+      grid-column: 2;
+      grid-row: 1;
+      justify-self: end;
+    }
+
+    .nav-cta {
+      padding: 7px 13px;
+      font-size: 0.82rem;
+    }
+
+    .nav-links {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      justify-self: center;
+      width: 100%;
+      justify-content: center;
+      gap: 4px;
+      padding-top: 4px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .nav-link {
+      padding: 5px 10px;
+      font-size: 0.84rem;
+    }
+
+    /* Hide bottom pill on mobile where space is limited */
+    .stage-indicator {
+      display: none;
+    }
+
+    /* Mobile container interior adjustments */
+    .interior-scroll {
+      padding: 16px 16px 18px;
+    }
+
+    .section-heading {
+      font-size: 1.24rem;
+      margin-bottom: 8px;
+    }
+
+    .section-lead {
+      font-size: 0.85rem;
+      line-height: 1.42;
+      margin-bottom: 7px;
+    }
+
+    .section-copy {
+      font-size: 0.79rem;
+      line-height: 1.42;
+      margin-bottom: 8px;
+    }
+
+    .pill-row {
+      gap: 5px;
+      margin: 8px 0 10px;
+    }
+
+    .role-pill {
+      font-size: 0.7rem;
+      padding: 4px 8px;
+    }
+
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .capabilities-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .about-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .about-portrait-card {
+      max-width: 140px;
+    }
+
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .certs-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ==========================================================================
+   PREFERS REDUCED MOTION
+   Disable transitions, avoid unnecessary movement, jump directly to state
+   ========================================================================== */
+  @media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 160" fill="none">
+  <rect width="360" height="160" fill="#0d1b35"/>
+  <rect x="16" y="16" width="102" height="128" rx="6" fill="#13274a" stroke="rgba(255,255,255,0.12)"/>
+  <text x="26" y="34" fill="#ffd23f" font-family="Arial, sans-serif" font-weight="700" font-size="9">TASKS &amp; HABITS</text>
+  <rect x="26" y="44" width="82" height="12" rx="3" fill="#23d18b" opacity="0.28"/>
+  <rect x="26" y="62" width="82" height="12" rx="3" fill="rgba(255,255,255,0.1)"/>
+  <rect x="26" y="80" width="82" height="12" rx="3" fill="rgba(255,255,255,0.1)"/>
+  <rect x="128" y="16" width="102" height="128" rx="6" fill="#13274a" stroke="rgba(255,255,255,0.12)"/>
+  <text x="138" y="34" fill="#46b8ff" font-family="Arial, sans-serif" font-weight="700" font-size="9">FINANCE &amp; VAULT</text>
+  <rect x="138" y="46" width="82" height="36" rx="4" fill="#091326"/>
+  <rect x="138" y="90" width="82" height="40" rx="4" fill="rgba(255,255,255,0.08)"/>
+  <rect x="240" y="16" width="104" height="128" rx="6" fill="#13274a" stroke="#f26a1f" stroke-opacity="0.45"/>
+  <text x="250" y="34" fill="#ff9960" font-family="Arial, sans-serif" font-weight="700" font-size="9">RAG ASSISTANT</text>
+  <rect x="250" y="48" width="84" height="18" rx="4" fill="rgba(255,255,255,0.14)"/>
+  <rect x="250" y="74" width="84" height="30" rx="4" fill="rgba(70,184,255,0.2)"/>
+  <rect x="250" y="112" width="60" height="16" rx="4" fill="#ffd23f" opacity="0.35"/>
+</svg>

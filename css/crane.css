@@ -1,0 +1,237 @@
+/* ==========================================================================
+   ROBOTIC CARGO CRANE & RAIL
+   ========================================================================== */
+
+@property --crane-x {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 500px;
+}
+
+@property --rod-len {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 60px;
+}
+
+@property --claw-span {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 260px;
+}
+
+@property --finger-angle {
+  syntax: '<angle>';
+  inherits: true;
+  initial-value: 16deg;
+}
+
+@property --grip-bounce {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 0px;
+}
+
+.crane-system {
+  position: absolute;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Full-width Horizontal Rail: 16px height, white-to-grey gradient, soft blue shadow, dashed track */
+.crane-rail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--rail-height);
+  background: linear-gradient(180deg, #ffffff 0%, #e4ebf5 55%, #b8c5d8 100%);
+  border-bottom: 1.5px solid rgba(25, 58, 112, 0.28);
+  box-shadow: 0 6px 18px rgba(7, 45, 108, 0.34);
+  display: flex;
+  align-items: center;
+}
+
+.crane-rail-track {
+  width: 100%;
+  height: 3px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(25, 58, 112, 0.28) 0px,
+    rgba(25, 58, 112, 0.28) 10px,
+    transparent 10px,
+    transparent 18px
+  );
+}
+
+/* Moving Crane Assembly centered horizontally at --crane-x */
+.crane-assembly {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translate3d(var(--crane-x), 0, 0);
+  will-change: transform;
+}
+
+/* Carriage: 68 x 34px rounded white block with two wheel details */
+.crane-carriage {
+  position: relative;
+  width: 68px;
+  height: 34px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #ffffff 0%, #eef3fa 65%, #d3deec 100%);
+  border: 1.5px solid rgba(24, 52, 98, 0.22);
+  box-shadow:
+    0 8px 18px rgba(7, 40, 96, 0.32),
+    inset 0 2px 3px rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.carriage-wheel {
+  position: absolute;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffffff 0%, #90a1b9 55%, #465872 100%);
+  border: 1.5px solid #2b3c56;
+}
+
+.wheel-left {
+  left: 9px;
+}
+
+.wheel-right {
+  right: 9px;
+}
+
+.carriage-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 8px;
+  background: #23d18b;
+  box-shadow: 0 0 8px rgba(35, 209, 139, 0.85);
+}
+
+.crane-system.is-busy .carriage-status-dot {
+  background: var(--yellow-highlight);
+  box-shadow: 0 0 10px rgba(255, 210, 63, 0.95);
+}
+
+/* Chrome Vertical Rod: grey-white-grey gradient, height driven by --rod-len */
+.crane-rod {
+  width: 11px;
+  height: var(--rod-len);
+  background: linear-gradient(90deg, #7e8ea5 0%, #f5f9ff 42%, #ffffff 54%, #9aa9be 82%, #687890 100%);
+  border-left: 1px solid rgba(255, 255, 255, 0.55);
+  border-right: 1px solid rgba(20, 42, 78, 0.35);
+  box-shadow: 2px 4px 12px rgba(6, 33, 82, 0.25);
+  z-index: 1;
+}
+
+/* Grip Head: 72 x 34px rounded white block */
+.crane-grip-head {
+  position: relative;
+  width: 72px;
+  height: 34px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #ffffff 0%, #ecf2fa 62%, #cfdbe9 100%);
+  border: 1.5px solid rgba(24, 52, 98, 0.24);
+  box-shadow:
+    0 10px 22px rgba(5, 32, 78, 0.34),
+    inset 0 2px 3px rgba(255, 255, 255, 0.92);
+  transform: translateY(var(--grip-bounce));
+  z-index: 3;
+}
+
+.grip-bolt {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #6f819b;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.bolt-left {
+  left: 10px;
+}
+
+.bolt-right {
+  right: 10px;
+}
+
+/* Spreader Bar connecting Grip Head to both L-shaped fingers */
+.crane-spreader {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  width: calc(var(--claw-span) + 28px);
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ffffff 0%, #d2deed 100%);
+  border: 1px solid rgba(20, 44, 86, 0.24);
+  box-shadow: 0 4px 10px rgba(5, 28, 70, 0.28);
+  z-index: -1;
+}
+
+/* L-Shaped White Fingers */
+.crane-finger {
+  position: absolute;
+  top: 2px;
+  width: 14px;
+  height: 36px;
+  transform-origin: 50% 4px;
+}
+
+.finger-left {
+  left: -4px;
+  transform: rotate(var(--finger-angle));
+}
+
+.finger-right {
+  right: -4px;
+  transform: rotate(calc(var(--finger-angle) * -1));
+}
+
+.finger-arm {
+  width: 10px;
+  height: 29px;
+  margin: 0 auto;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #ffffff 0%, #e4edf8 60%, #bfcde0 100%);
+  border: 1px solid rgba(22, 46, 90, 0.25);
+  box-shadow: 0 4px 10px rgba(5, 25, 65, 0.25);
+}
+
+.finger-hook {
+  position: absolute;
+  bottom: 0;
+  width: 18px;
+  height: 9px;
+  border-radius: 5px;
+  background: linear-gradient(180deg, #ffffff 0%, #d4e0ee 100%);
+  border: 1px solid rgba(22, 46, 90, 0.28);
+  box-shadow: 0 4px 10px rgba(5, 25, 65, 0.26);
+}
+
+.finger-left .finger-hook {
+  left: 2px;
+}
+
+.finger-right .finger-hook {
+  right: 2px;
+}

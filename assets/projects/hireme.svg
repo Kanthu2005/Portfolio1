@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 160" fill="none">
+  <rect width="360" height="160" fill="#0d1b35"/>
+  <rect x="16" y="16" width="144" height="128" rx="6" fill="#13274a" stroke="rgba(255,255,255,0.12)"/>
+  <text x="28" y="36" fill="#ffd23f" font-family="Arial, sans-serif" font-weight="700" font-size="10">RESUME ATS PARSER</text>
+  <rect x="28" y="48" width="120" height="8" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <rect x="28" y="64" width="96" height="8" rx="4" fill="rgba(255,255,255,0.14)"/>
+  <rect x="28" y="84" width="54" height="18" rx="4" fill="#1f93f2" opacity="0.35"/>
+  <rect x="88" y="84" width="60" height="18" rx="4" fill="#23d18b" opacity="0.3"/>
+  <rect x="28" y="112" width="120" height="18" rx="4" fill="rgba(255,255,255,0.08)"/>
+  <rect x="172" y="16" width="172" height="128" rx="6" fill="#13274a" stroke="rgba(255,255,255,0.12)"/>
+  <text x="184" y="36" fill="#ffffff" font-family="Arial, sans-serif" font-weight="700" font-size="10">CANDIDATE RANKING</text>
+  <rect x="184" y="50" width="148" height="22" rx="4" fill="#091326"/>
+  <rect x="184" y="78" width="148" height="22" rx="4" fill="#091326"/>
+  <rect x="184" y="106" width="148" height="22" rx="4" fill="#091326"/>
+  <rect x="192" y="57" width="84" height="8" rx="3" fill="#23d18b" opacity="0.7"/>
+  <rect x="192" y="85" width="72" height="8" rx="3" fill="#46b8ff" opacity="0.7"/>
+  <rect x="192" y="113" width="58" height="8" rx="3" fill="#ffd23f" opacity="0.7"/>
+</svg>
